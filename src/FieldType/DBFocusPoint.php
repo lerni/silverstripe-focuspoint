@@ -31,7 +31,9 @@ class DBFocusPoint extends DBComposite
      */
     public function getX()
     {
-        return (double)$this->getField('X');
+		if ($this->owner->exists()) {
+			return (double)$this->getField('X');
+		}
     }
 
     /**

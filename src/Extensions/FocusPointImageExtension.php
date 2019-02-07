@@ -103,7 +103,9 @@ class FocusPointImageExtension extends DataExtension
      */
     public function FocusFill($width, $height, $upscale = true)
     {
-        return $this->owner->FocusPoint->FocusFill($width, $height, $this->owner, $upscale);
+    	if ($this->owner->exists()) {
+			return $this->owner->FocusPoint->FocusFill($width, $height, $this->owner, $upscale);
+		}
     }
 
     public function requireDefaultRecords()

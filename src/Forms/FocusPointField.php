@@ -80,7 +80,7 @@ class FocusPointField extends FieldGroup
             'showDebug' => Director::isDev() && $this->config()->get('debug')
         ];
 
-        if ($this->image) {
+        if ($this->image && $this->image->exists()) {
             $w = intval($this->config()->get('max_width'));
             $h = intval($this->config()->get('max_height'));
             $previewImage = $this->image->FitMax($w * 2, $h * 2);
