@@ -88,8 +88,8 @@ class FocusPointField extends FieldGroup
                 'previewUrl' => $previewImage->URL,
                 'previewWidth' => $previewImage->getWidth(),
                 'previewHeight' => $previewImage->getHeight(),
-                'X' => $this->image->getField('FocusPoint')->getX(),
-                'Y' => $this->image->getField('FocusPoint')->getY()
+                'X' => $this->image->getField($this->getName())->getX(),
+                'Y' => $this->image->getField($this->getName())->getY()
             ];
         }
 

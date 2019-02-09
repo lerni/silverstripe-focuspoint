@@ -1,3 +1,0 @@
-hr:
-  SilverStripe\Assets\Image:
-    db_FocusPoint: 'Točka fokusa'
